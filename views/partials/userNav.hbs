@@ -10,11 +10,15 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .myOrder{
+          color: greenyellow;
+          text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-
-
   <div class=" navbar sticky-top">
     <ul>
       <li>HOME</li>
@@ -45,8 +49,8 @@
         </a>
       </li>
         
-      <li><a href="/myorders">myorder</a></li>
-      <li><a href="/logout"> logout</a></li>
+      <li><a href="/myorders" class="myOrder">myorder</a></li>
+      <li><a href="/logout" class="myOrder"> logout</a></li>
       {{/if}}
     </ul>
   </div>

@@ -11,11 +11,37 @@
         "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous">
     </script>
+    <style>
+        .pay{
+            width: 60%;
+            height: 200px;
+            border: 1px solid black;
+            padding: 20px;
+            margin: auto;
+            margin-top: 10%;
+        }
+        .pay button{
+            background-color: black;
+        }
+        .id{
+            font-size: 30px;
+            color: green;
+            padding: 20px;
+        }
+        .amnt{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-     <button id="rzp-button1"style="border: 2px solid black;color:violet">Pay</button>
-    <h1 id="ammt">{{order.amount}}</h1>
-    <h1 id="ids">{{order.id}}</h1>
+    <div class="pay">
+         <button id="rzp-button1"style="border: 2px solid black;color:violet" class="buttn">Pay</button>
+         <h1 id="ammt" class="amnt">{{order.amount}}</h1>
+    <div style="display:flex">
+            <h1>Yor OrderID:</h1> <h1 id="ids" class="id">{{order.id}}</h1>
+    </div>
+    </div>
+    
     <script>
         let amount=document.getElementById("ammt").innerHTML;
         let id=document.getElementById("ids").innerHTML;

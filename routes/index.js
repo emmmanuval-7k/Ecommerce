@@ -64,7 +64,7 @@ router.get('/usercart', function (req, res, next) {
       user.total=total;
       user.GST=GST;
       user.subTotal=subTotal;
-      res.render('user/usercart', { user, product });
+      res.render('user/Cart', { user, product });
 
     }
   })
@@ -259,7 +259,7 @@ router.get("/createOrder/:amount",(req,res)=>{
   console.log(req.params.amount)
   let amount=req.params.amount;
     var options={
-    amount:amount*100,
+    amount:amount,
     currency:"INR",
     receipt:" order_rcptid_11"
   };
@@ -301,7 +301,7 @@ router.post('/varify',async(req,res)=>{
     });
 
     router.get('/myorders',(req,res)=>{
-      var sql ="select addproduct.id,addproduct.Name, addproduct.des, addproduct.price, addproduct.img,cart.qty,cart.userid from addproduct inner join cart on addproduct.id=cart.productid where cart.userid=? and cart.status='purchased'";
+      var sql ="select addproduct.id,addproduct.Name, addproduct.des, addproduct.price, addproduct.img,cart.qty,cart.userid,cart.status from addproduct inner join cart on addproduct.id=cart.productid where cart.userid=? and cart.status='purchased'";
       let  userid=req.session.user.id;
       let user=req.session.user;
       con.query(sql,[userid],(err,result)=>{
@@ -313,6 +313,9 @@ router.post('/varify',async(req,res)=>{
           res.render("user/myorders",{user,orderProducts})
         }
       })
+    })
+    router.get('/carts',(req,res)=>{
+      res.render('user/Cart')
     })
 
 module.exports = router;
