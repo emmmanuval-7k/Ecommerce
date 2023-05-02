@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid12">
+        
+        <div class="firstbox">
+            <form action="/userlogin" method="post"> 
+            <input class="mov" type="text" placeholder="enter your name" name="name">
+            <input class="mov" type="email" placeholder="enter your email" name="email">
+            <input class="mov" type="password" placeholder="password" name="password" >
+            <input class="mov" type="text" placeholder="enter your mobile no" name="phoneno">
+            {{!-- <input type="text" class="mov" placeholder="username" name="username"> --}}
+            <h5>By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</h5>
+            <input type="submit" class="login" value="Register">
+            {{!-- <button class="login">Login</button> --}}
+            <h4>OR</h4>
+             <button class="logins"> REQUEST OTP </button>
+             <h5 class="come">New to Flipkart? Create an account</h5>
+             
+            </form> 
+        </div>
+        <div class="secondbox">
+            <h1 class="hh">register</h1>
+            <h3 class="pp">Get access to your <br> Orders, Wishlist and <br> Recommendations</h3>
+            <img class="imagess" src="/public/images/flipcartttt.jpg" alt="">
+        </div>
+         </div>
+</body>
+</html>
